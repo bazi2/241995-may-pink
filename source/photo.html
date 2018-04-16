@@ -37,7 +37,7 @@
         <h2 class="visually-hidden">Фотографии пользователей</h2>
         <p class="photo__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <ul class="photo__list">
-          <li class="photo__item">
+          <li class="photo__item user">
             <blockquote class="user__post">
               <img class="user__images" src="img/user-photo-1.jpg" width="" height="" alt="Фото пользователя">
               <cite class="user__author">Анна</cite>
@@ -46,7 +46,7 @@
               <p class="user__like">Нравится: 215</p>
             </blockquote>
           </li>
-          <li class="photo__item">
+          <li class="photo__item user">
             <blockquote class="user__post">
               <img class="user__images" src="img/user-photo-2.jpg" width="" height="" alt="Фото пользователя">
               <cite class="user__author">Левон</cite>
@@ -55,7 +55,7 @@
               <p class="user__like">Нравится: 356</p>
             </blockquote>
           </li>          
-          <li class="photo__item">
+          <li class="photo__item user">
             <blockquote class="user__post">
               <img class="user__images" src="img/user-photo-3.jpg" width="" height="" alt="Фото пользователя">
               <cite class="user__author">Антон</cite>
@@ -64,7 +64,7 @@
               <p class="user__like">Нравится: 666</p>
             </blockquote>
           </li>
-          <li class="photo__item">
+          <li class="photo__item user">
             <blockquote class="user__post">
               <img class="user__images" src="img/user-photo-4.jpg" width="" height="" alt="Фото пользователя">
               <cite class="user__author">Борис</cite>
@@ -73,7 +73,7 @@
               <p class="user__like">Нравится: 215</p>
             </blockquote>
           </li>
-          <li class="photo__item">
+          <li class="photo__item user">
             <blockquote class="user__post">
               <img class="user__images" src="img/user-photo-5.jpg" width="" height="" alt="Фото пользователя">
               <cite class="user__author">Сергей</cite>
@@ -82,7 +82,7 @@
               <p class="user__like">Нравится: 4</p>
             </blockquote>
           </li>
-          <li class="photo__item">
+          <li class="photo__item user">
             <blockquote class="user__post">
               <img class="user__images" src="img/user-photo-6.jpg" width="" height="" alt="Фото пользователя">
               <cite class="user__author">Максим</cite>
@@ -91,7 +91,7 @@
               <p class="user__like">Нравится: 150</p>
             </blockquote>
           </li>
-          <li class="photo__item">
+          <li class="photo__item user">
             <blockquote class="user__post">
               <img class="user__images" src="img/user-photo-7.jpg" width="" height="" alt="Фото пользователя">
               <cite class="user__author">Надежда</cite>
@@ -104,6 +104,7 @@
       </section>
 
       <section class="editor">
+        <h2 class="visually-hidden">Редактор для обработки фотографий</h2>
         <img class="editor__photo" src="img/final-user-photo.jpg" width="280" height="374" alt="Загрузите фото для редактированиям">
         <div class="editor__toggle">
           <ul class="editor__list">
@@ -117,19 +118,19 @@
               <button class="editor__button editor__button--bright" type="button"></button>
             </li>
           </ul>
-          <div class="editor-toggle__controls">
-            <div class="scale">
-              <div class="bar"></div>
+          <div class="editor__controls controls">
+            <div class="controls__scale">
+              <div class="controls__bar"></div>
             </div>
-            <div class="range-toggle"></div>
+            <div class="controls__range-toggle"></div>
           </div>
-          <button class="editor-toggle__button button editor-toggle__button--post" type="button">Запостить</button>
-          <button class="editor-toggle__button button editor-toggle__button--reset" type="button">Отмена</button>
+          <button class="editor__button button editor__button--post" type="button">Запостить</button>
+          <button class="editor__button button editor__button--reset" type="button">Отмена</button>
         </div>
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer footer">
       <img class="footer__logo" src="img/logo.svg" width="147" height="40" alt="Логотип компании Пинк">
       <div class="footer__social social">
         <ul class="social__list">
@@ -144,7 +145,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer__copyright">
+      <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <img class="copyright__logo-image" src="img/htmlacademy.svg" width="147" height="40" alt="Логотип htmlacademy">
       </div>
