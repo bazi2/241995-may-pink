@@ -1,0 +1,23 @@
+@color-main--light: #ffffff; // дополнительный цвет(белый)
+@color-main: #283645; // основной цвет
+@color-hover: #d22856; // Цвет при нажатии (лого)
+
+.form {
+	color: @color-main;
+	background-color: @color-main--light;
+}
+
+.form__text {
+	line-height: 30px;
+}
+
+.form__group {
+	color: @color-hover;
+	text-transform: uppercase;
+}
+
+input[placeholder] {
+	font-size: 18px;
+	line-height: 30px;
+	color: @color-main;
+}
