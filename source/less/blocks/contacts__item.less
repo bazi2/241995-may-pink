@@ -1,0 +1,20 @@
+.contacts__item {
+  //Временно для сетки
+  outline: 2px solid blue;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__item {
+    width: 300px;
+  }
+}
+
+.contacts__item:last-child {
+  flex-grow: 1;
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__item:last-child {
+    flex-grow: 0;
+  }
+}

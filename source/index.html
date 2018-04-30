@@ -131,13 +131,12 @@
             <ul class="price__list slider__list">
               <li class="price__item slider__item">
                 <header class="price__header">
-                  <div class="container">
+                  <div class="price__wrapper--list">
                     <h3 class="price__title">Стандарт</h3>
                     <p class="price__cost">3,99 USD</p>
                   </div>
                 </header>
-                <div class="price__wrapper--table">
-                  <div class="container">
+                <div class="price__wrapper--list">
                     <table class="price__table">
                       <tr>
                         <td class="price__value">Розовый фильтр</td>
@@ -152,18 +151,64 @@
                         <td class="price__field"></td>
                       </tr>         
                     </table>
-                  </div>
                 </div>
               </li>
             </ul>
-            <p class="price__toggles slider__toggles container">
-              <button class="slider__toggle" type="button">1</button>
-              <button class="slider__toggle" type="button">2</button>
-              <button class="slider__toggle" type="button">3</button>
-            </p>
+            <div class="price__wrapper--list">
+              <p class="price__toggles slider__toggles">
+                <button class="slider__toggle" type="button">1</button>
+                <button class="slider__toggle" type="button">2</button>
+                <button class="slider__toggle" type="button">3</button>
+              </p>
+            </div>
           </div>
         </section>
       </div>
+
+      <section class="feedback">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <div class="feedback__wrapper">
+          <p class="feedback__text">Остались вопросы? Свяжитесь с нами!</p>
+          <ul class="feedback__list contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__title">Звоните:</h3>
+              <p class="contacts__text contacts__text--phone">+7 (812) 555-66-66</p>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__title">Пишите:</h3>
+              <p class="contacts__text contacts__text--email">mail@htmlacademy.ru</p>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__title">Приезжайте в гости:</h3>
+              <p class="contacts__text contacts__text--adress">ул. Большая Конюшенная, 19/8</p>
+            </li>
+          </ul>
+        </div>
+        <img class="feedback__map" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Контакты офиса по адресу: ул. Большая Конюшенная, 19/8">
+      </section>
     </main>
+
+    <footer class="page-footer footer">
+      <div class="footer__wrapper">
+        <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип компании Пинк">
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twiiter" href="#"><span class="visually-hidden">Мы в твитере</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фэйсбуке</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__copyright copyright">
+          <p class="copyright__text">Разработано</p>
+          <img class="copyright__logo-image" src="img/htmlacademy.svg" width="147" height="40" alt="Логотип htmlacademy">
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

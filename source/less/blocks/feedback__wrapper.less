@@ -1,0 +1,31 @@
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+  margin: 0 auto;
+
+  //Временно для сетки
+  outline: 2px solid cyan;
+  min-height: 409px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__wrapper {
+    width: 620px;
+  margin: 0 auto;
+
+  //Временно для сетки
+  min-height: 283px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__wrapper {
+    width: 940px;
+  margin: 0 auto;
+
+  //Временно для сетки
+  min-height: 426px;
+  }
+}

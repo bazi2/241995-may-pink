@@ -1,0 +1,21 @@
+.feedback__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  //Временно для сетки
+  outline: 2px solid green;
+  min-height: 235px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
