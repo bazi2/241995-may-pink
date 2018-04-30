@@ -1,5 +1,18 @@
 .page-header__wrapper {
-	background-color: @color-main--dark;
-	background-image: url("../../img/bg-back-mobile@1x.jpg");
-	background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+
+  //Временно для сетки
+  outline: 2px solid green;
+  background-color: rgba(162, 3, 177, 0.3);
+
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+  }
 }

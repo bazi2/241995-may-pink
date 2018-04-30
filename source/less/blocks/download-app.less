@@ -1,6 +1,10 @@
 .download-app {
-  background-color: @color-main--dark;
   color: @color-main--light;
+
+  //Временно для сетки
+  outline: 2px solid red;
+  background-color: rgba(171, 42, 57, 0.3);
+  min-height: 271px;
 }
 
 .download-app__button {
@@ -14,4 +18,10 @@
 
 .download-app__text {
   font-weight: 300;
+}
+
+@media (min-width: @tablet-width) {
+  .download-app {
+    width: 300px;
+  }
 }

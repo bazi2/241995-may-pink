@@ -1,0 +1,23 @@
+.advantages__list {
+  //Временно для сетки
+  min-height: 455px;
+  outline: 2px solid brown;
+  background-color: rgba(135,85, 32, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    order: 2;
+    width: 310px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    display: flex;
+    
+    //Временно для сетки
+    width: auto;
+    min-height: 285px;
+  }
+}

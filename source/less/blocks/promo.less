@@ -1,3 +1,26 @@
 .promo {
-	color: @color-main--light;
+  //Временно для сетки
+  outline: 2px solid red;
+  background-color: rgba(171, 42, 57, 0.3);
+  min-height: 396px;
 }
+
+@media (min-width: @tablet-width) {
+  .promo {
+    width: 300px;
+    order: 2;
+    
+    //Временно для сетки
+    min-height: 619px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+
+
+    //Временно для сетки
+    min-height: 743px;
+  }
+}
+
