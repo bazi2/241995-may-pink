@@ -1,5 +1,21 @@
-.features-list__title {
-	color: @color-main--black;
-	font-size: 18px;
-	font-weight: bold;
+@media (min-width: @desktop-width) {
+  .features-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    padding-top: 357px;
+    width: 875px;
+  }
+
+  .features-list::before {
+    content: "";
+    position: absolute;
+    top: ;
+    left: ;
+
+    background-image: url("../img/");
+    background-repeat: no-repeat;
+  }
 }

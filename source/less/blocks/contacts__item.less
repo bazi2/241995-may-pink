@@ -18,16 +18,22 @@
 @media (min-width: @tablet-width) {
   .contacts__item {
     margin-bottom: 47px;
+
+    text-align: center;
   }
 
   .contacts__item:last-child {
   flex-grow: 1;
   padding: 0 200px;
-}
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts__item:last-child {
-    flex-grow: 0;
+    padding: 0;
+  }
+
+  .contacts__item:nth-child(2) {
+    order: 1;
   }
 }
