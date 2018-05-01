@@ -1,0 +1,25 @@
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  //Временно для сетки
+  outline: 2px solid black;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    width: 620px;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    width: 940px;
+    padding: 0 130px;
+  }
+}

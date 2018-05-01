@@ -1,11 +1,6 @@
 .main-menu {
-  
-
-  //Временно для сетки
-  outline: 2px solid yellow;
-  background-color: rgba(235, 108, 14, 0.3);
-  min-height: 256px;
-}
+    background-color: @color-main;
+  }
 
 .main-menu__list {
   margin: 0;
@@ -15,19 +10,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-menu {
-    width: 660px;
-    margin: 0 auto;
+  .main-menu__toggle {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-menu {
+    width: 622px;
     margin: 0;
-
-  //Временно для сетки
-  min-height: 110px;
-  min-width: 620px;
   }
 }
 

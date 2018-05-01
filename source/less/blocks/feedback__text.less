@@ -1,12 +1,21 @@
 .feedback__text {
   margin: 0;
   padding: 0;
+  padding-bottom: 35px;
   
   font-size: 24px;
   font-weight: 300;
   line-height: auto;
   color: @color-main;
+  text-align: center;
+}
 
-  //Временно для сетки
-  outline: 2px solid yellow;
+@media (min-width: @tablet-width) {
+  .feedback__text {
+    padding: 0 115px;
+    margin-bottom: 45px;
+    
+    font-size: 40px;
+    line-height: 48px;
+  }
 }

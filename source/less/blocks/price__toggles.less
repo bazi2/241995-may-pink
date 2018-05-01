@@ -1,8 +1,14 @@
 .price__toggles {
   margin: 0;
   padding: 0;
+  padding-top: 40px;
+  padding-bottom: 47px;
 
-  //Временно для сетки
-  outline: 2px solid orange;
-  min-height: 101px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .price__toggles {
+    display: none;
+  }
 }
