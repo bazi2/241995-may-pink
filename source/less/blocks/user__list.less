@@ -1,6 +1,18 @@
 .user__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;  
 
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
 }
