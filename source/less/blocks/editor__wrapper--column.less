@@ -3,5 +3,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 300px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .editor__wrapper--column {
+    width: 410px;
+
+    //Временно для сетки
+    background-color: blue;
+  }
+}
+

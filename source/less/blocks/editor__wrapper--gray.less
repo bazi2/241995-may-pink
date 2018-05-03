@@ -11,9 +11,20 @@
 @media (min-width: @tablet-width) {
   .editor__wrapper--gray {
     flex-direction: row;
+    justify-content: space-between;
     width: 620px;
     margin: 0 auto;
     padding-top: 57px;
     padding-bottom: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor__wrapper--gray {
+    width: 800px;
+    padding: 57px 60px 57px 80px;
+    margin: 0 auto;
+
+    background-color: @color-main--darken;
   }
 }
