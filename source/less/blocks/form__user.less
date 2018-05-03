@@ -1,8 +1,17 @@
 .form__user {
   display: flex;
   flex-direction: column;
+
+  font: inherit;
   
   //Временно для сетки
   outline: 2px solid green;
-  min-height: 2090px;
+}
+
+@media (min-width: @desktop-width) {
+  .form__user {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
 }

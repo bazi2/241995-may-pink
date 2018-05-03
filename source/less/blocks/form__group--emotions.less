@@ -1,0 +1,31 @@
+.form__group--emotions {
+
+  //Временно для сетки
+  min-height: 298px;
+  outline: 2px solid red;
+
+  textarea {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__group--emotions {
+    order: 4;
+    
+    //Временно для сетки
+    min-height: 358px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__group--emotions {
+    order: 4;
+    flex-grow: 1;
+    width: 940px;
+
+    //Временно для сетки
+    min-height: 283px;
+  }
+}

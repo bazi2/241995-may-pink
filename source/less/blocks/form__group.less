@@ -1,80 +1,26 @@
-//Временно для сетки
+.form__group {
+  margin: 0;
+  padding: 0;
 
-.form__group:first-child {
-  min-height: 379px;
-  outline: 2px dotted blue;
-}
+  color: @color-hover;
+  text-transform: uppercase;
 
-.form__group:nth-child(2) {
-  min-height: 604px;
-  outline: 2px dotted blue;
-}
+  border: none;
 
-.form__group:nth-child(3) {
-  min-height: 287px;
-  outline: 2px dotted blue;
-}
+  label {
+    line-height: 30px;
+  }
 
-.form__group:nth-child(4) {
-  min-height: 340px;
-  outline: 2px dotted blue;
-}
+  p {
+    margin: 0;
+  }
 
-.form__group:last-child {
-  min-height: 323px;
-  outline: 2px dotted blue;
+  input[placeholder] {
+    font-size: 18px;
+    line-height: 30px;
+    color: @color-main;
+  }
 }
 
-@media (min-width: @tablet-width) {
-  .form__group:first-child {
-  min-height: 330px;
-  outline: 2px dotted blue;
-}
 
-.form__group:nth-child(2) {
-  min-height: 325px;
-  outline: 2px dotted blue;
-}
 
-.form__group:nth-child(3) {
-  min-height: 335px;
-  outline: 2px dotted blue;
-}
-
-.form__group:nth-child(4) {
-  min-height: 560px;
-  outline: 2px dotted blue;
-}
-
-.form__group:nth-child(5) {
-  min-height: 330px;
-  outline: 2px dotted blue;
-}
-}
-
-@media (min-width: @desktop-width) {
-  .form__group:first-child {
-  min-height: 315px;
-  outline: 2px dotted blue;
-}
-
-.form__group:nth-child(2) {
-  min-height: 0px;
-  outline: 2px dotted blue;
-}
-
-.form__group:nth-child(3) {
-  min-height: 235px;
-  outline: 2px dotted blue;
-}
-
-.form__group:nth-child(4) {
-  min-height: 250px;
-  outline: 2px dotted blue;
-}
-
-.form__group:nth-child(5) {
-  min-height: 30px;
-  outline: 2px dotted blue;
-}
-}

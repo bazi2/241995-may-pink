@@ -48,7 +48,7 @@
         <div class="form__wrapper">
           <p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните </p>
           <form class="form__user" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--identification">
               <p>
                 <label for="surname-field">Фамилия:</label>
                 <input id="surname-field" name="surname" type="text" placeholder="Укажите фамилию *" required>
@@ -62,34 +62,36 @@
                 <input id="patronymic-field" name="patronymic" type="text" placeholder="Ну и отчество тоже">
               </p>
             </fieldset>
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--achievement">
               <legend>Ваши безбашенные достижения в путешествии</legend>
-              <p>
-                <input id="achievement-1" type="checkbox" name="selfie" checked>
-                <label for="achievement-1">Сделал селфи с акулой</label>
-              </p>
-              <p>
-                <input id="achievement-2" type="checkbox" name="burned" checked>
-                <label for="achievement-2">Обгорел на пляже</label>
-              </p>
-              <p>
-                <input id="achievement-3" type="checkbox" name="chuck-norris">
-                <label for="achievement-3">Видел Чака Норриса</label>
-              </p>
-              <p>
-                <input id="achievement-4" type="checkbox" name="souvenir">
-                <label for="achievement-4">Накупил сувениров</label>
-              </p>
-              <p>
-                <input id="achievement-5" type="checkbox" name="turret" checked>
-                <label for="achievement-5">Удержал башню</label>
-              </p>
-              <p>
-                <input id="achievement-6" type="checkbox" name="hotel">
-                <label for="achievement-6">Разгромил отель</label>
-              </p>
+              <ul class="form__group-list">
+                <li class="form__group-item">            
+                  <input id="achievement-1" type="checkbox" name="selfie" checked>
+                  <label for="achievement-1">Сделал селфи с акулой</label>
+                </li>
+                <li class="form__group-item">
+                  <input id="achievement-2" type="checkbox" name="burned" checked>
+                  <label for="achievement-2">Обгорел на пляже</label>
+                </li>
+                <li class="form__group-item">
+                  <input id="achievement-3" type="checkbox" name="chuck-norris">
+                  <label for="achievement-3">Видел Чака Норриса</label>
+                </li>
+                <li class="form__group-item">
+                  <input id="achievement-4" type="checkbox" name="souvenir">
+                  <label for="achievement-4">Накупил сувениров</label>
+                </li>
+                <li class="form__group-item">
+                  <input id="achievement-5" type="checkbox" name="turret" checked>
+                  <label for="achievement-5">Удержал башню</label>
+                </li>
+                <li class="form__group-item">
+                  <input id="achievement-6" type="checkbox" name="hotel">
+                  <label for="achievement-6">Разгромил отель</label>
+                </li>
+              </ul>
             </fieldset>
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--contacts">
               <p>
                 <label for="phone-field">Номер телефона</label>
                 <input id="phone-field" name="phone" type="text" placeholder="Номер, пожалуйста">
@@ -99,30 +101,34 @@
                 <input id="email-field" name="email" type="text" placeholder="Введите почту *" required>
               </p>
             </fieldset>
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--apps">
               <legend>С каким приложением путешествовали?</legend>
-              <p>
-                <input id="ios-field" type="radio" name="appstore" checked value="ios">
-                <label for="ios-field">Pink для iOS</label>
-              </p>
-              <p>
-                <input id="android-field" type="radio" name="appstore" value="android">
-                <label for="android-field">Pink на Android</label>
-              </p>
-              <p>
-                <input id="windows-field" type="radio" name="appstore" value="windows">
-                <label for="windows-field">Windows Phone</label>
-              </p>
+              <ul class="form__group-list--apps">
+                <li>
+                  <input id="ios-field" type="radio" name="appstore" checked value="ios">
+                  <label for="ios-field">Pink для iOS</label>
+                </li>
+                <li>
+                  <input id="android-field" type="radio" name="appstore" value="android">
+                  <label for="android-field">Pink на Android</label>
+                </li>
+                <li>
+                  <input id="windows-field" type="radio" name="appstore" value="windows">
+                  <label for="windows-field">Windows Phone</label>
+                </li>
+              </ul>
             </fieldset>
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--emotions">
               <legend>Опишите свои эмоции</legend>
               <textarea>Можно прям в красках, не стесняясь в выражениях</textarea>
             </fieldset>
-            <button class="form__button button" type="submit">Отправить форму</button>
-          </form>
-          <small class="form__legend form__legend--bottom">
-            <sup>*</sup> — обязательные поля
-          </small>
+            <div class="form__wrapper--button">
+              <button class="form__button button" type="submit">Отправить форму</button>
+              <small class="form__legend form__legend--bottom">
+              <sup>*</sup> — обязательные поля
+              </small>
+            </div>
+          </form>          
         </div>
       </section>
     </main>
