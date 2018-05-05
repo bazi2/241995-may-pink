@@ -2,8 +2,85 @@
   color: @color-main--light;
 }
 
+.download-app__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+  padding: 28px 20px;
+  margin: 0 auto;
+  margin-top: 400px;
+}
+
+.download-app__slogan {
+  display: none;
+}
+
+.download-app__button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 32px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  color: @color-main--light;
+  text-align: center;
+
+  background-color: transparent;
+}
+
+.download-app__list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 24px;
+
+  list-style: none;
+
+  //Временно для сетки
+  outline: 2px solid #ffffff;
+  height: 56px;
+}
+
+.download-app__text {
+  margin: 0;
+  margin-bottom: 80px;
+  
+  font-weight: 300;
+  text-align: center;
+}
+
 @media (min-width: @tablet-width) {
   .download-app {
     width: 300px;
+  }
+
+  .download-app__wrapper {
+    width: 300px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .download-app__slogan {
+    display: block;
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0 50px;
+
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download-app__button {
+    margin-bottom: 67px;
+  }
+
+  .download-app__list {
+    margin-bottom: 57px;
   }
 }

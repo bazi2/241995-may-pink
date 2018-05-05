@@ -8,6 +8,22 @@
   margin-bottom: 0;
 }
 
+.contacts__title {
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: auto;
+}
+
+.contacts__text {
+  margin: 0;  
+  font-size: 24px;
+  font-weight: 300;
+  line-height: auto;
+  color: @color-hover;
+}
 
 @media (min-width: @tablet-width) {
   .contacts__item {
@@ -35,5 +51,13 @@
 
   .contacts__item:nth-child(2) {
     order: 1;
+  }
+
+  .contacts__title {
+    margin-bottom: 27px;
+  }
+
+  .contacts__text--adress {
+    padding: 0 30px;
   }
 }

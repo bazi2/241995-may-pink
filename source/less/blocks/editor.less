@@ -1,0 +1,161 @@
+.editor__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: @color-main--light;
+}
+
+.editor__text {
+  margin: 0;
+  padding: 0 12px;
+
+  line-height: 30px;
+  text-align: center;
+}
+
+.editor__wrapper--bg {
+  background-color: @color-main--darken;
+}
+
+.editor__wrapper--gray {
+  display: flex;
+  flex-direction: column;
+  
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.editor__toggle {
+  display: flex;
+  flex-direction: column;
+  padding: 42px 23px 28px 18px;
+  //Временно для сетки
+
+  width: 239px;
+  background-color: red;
+}
+
+.editor__list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 33px;
+
+  list-style: none;
+
+  //Временно для сетки
+  width: 239px;
+  height: 46px;
+  background-color: green;
+}
+
+.editor__controls {
+  //Временно для сетки
+  width: 239px;
+  height: 15px;
+  background-color: blue;
+}
+
+.editor__wrapper--button {
+  display: flex;
+  flex-direction: column;
+  padding-top: 39px;
+
+  //Временно для сетки
+  height: 123px;
+  background-color: orange;
+}
+
+.editor__button {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+
+  text-align: center;
+
+  background-color: transparent;
+  border: none;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+}
+
+.editor__button--post {
+  margin-bottom: 12px;
+
+  color: @color-hover;
+}
+
+.editor__button--reset {
+  color: @color-main--lighten;
+}
+
+@media (min-width: @tablet-width) {
+  .editor__wrapper {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+   .editor__text {
+    font-size: 18px;
+  }
+
+   .editor__wrapper--gray {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  .editor__wrapper--column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor__wrapper {
+    padding: 65px 20px;
+  }
+
+  .editor__wrapper--bg {
+    background-color: @color-main--light;
+  }
+
+  .editor__wrapper--gray {
+    width: 800px;
+    padding: 57px 60px 57px 80px;
+    margin: 0 auto;
+
+    background-color: @color-main--darken;
+  }
+
+  .editor__wrapper--column {
+    width: 410px;
+
+    //Временно для сетки
+    background-color: blue;
+  }
+
+  .editor__wrapper--button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 53px;
+  }
+
+  .editor__button {
+    width: 185px;
+  }
+
+  .editor__button--post {
+    margin-bottom: 0;
+  }
+}
