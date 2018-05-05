@@ -3,155 +3,186 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="page-header__wrapper">
-    	<header class="page-header">
-        <div class="container">
-          <a class="page-header__logo logo">
-            <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип компании «PINK»">
-          </a>
-          <nav class="main-menu">
-         	  <button class="main-menu__toggle" type="button">Открыть меню</button>
-         	  <div class="main-menu__wrapper">
-      	   	  <ul class="main-menu__list site-list">
-      	   		  <li class="site-list__item">
-      	   			  <a>Главная</a>
-      	   		  </li>
-      	   		  <li class="site-list__item">
-      	   			  <a href="photo.html">Фотографии</a>
-      	   		  </li>
-      	   		  <li class="site-list__item">
-      	   			  <a href="#">Конкурс</a>
-      	   		  </li>
-      	   		  <li class="site-list__item">
-      	   			  <a href="#">Html Academy</a>
-      	   		  </li>
-      	   	  </ul>
-      	   </div>
-         </nav>
-        </div>
-      </header>
-    
-      <section class="promo promo--photo">
-        <div class="container">
-          <h1 class="promo__title">Фотографии пользователей</h1>
-        </div>
-      </section>
-    </div>
-
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo">
+          <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип компании «PINK»">
+        </a>
+        <nav class="main-menu">
+          <button class="main-menu__toggle" type="button">Открыть меню</button>
+          <ul class="main-menu__list site-list">
+            <li class="site-list__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Html Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="promo promo--photo">
+      <h1 class="promo__title">Фотографии пользователей</h1>
+    </section>
     <main class="page-main">
       <section class="photo">
-        <div class="container">
-          <h2 class="visually-hidden">Фотографии пользователей</h2>
+        <h2 class="visually-hidden">Фотографии пользователей</h2>
+        <div class="photo__wrapper--description">
           <p class="photo__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-          <ul class="photo__list">
-            <li class="photo__item user">
+        </div>
+        <div class="photo__posts user">
+          <div class="photo__items user__items user__items--big">
+            <blockquote class="user__post">
+              <img class="user__images user__images--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото пользователя">
+              <img class="user__images user__images--panorama-big" src="img/panorama-tablet.jpg" width="660" height="509" alt="Фото пользователя">
+              <img class="user__images user__images--panorama-biggest" src="img/panorama-desktop.jpg" width="1200" height="509" alt="Фото пользователя">
+              <div class="user__wrapper user__wrapper--big">
+                <div class="user__wrapper-text user__wrapper-text--big">
+                  <cite class="user__author user__author--big">Анна</cite>
+                  <span class="user__time">(5 минут назад)</span>
+                  <p class="user__text user__text--big">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                  <p class="user__like user__like--big">Нравится: 215</p>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <ul class="photo__items user__list">
+            <li class="user__item">
               <blockquote class="user__post">
-                <img class="user__images" src="img/panorama-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                <cite class="user__author">Анна</cite>
-                <span class="user__time">(5 минут назад)</span>     
-                <p class="user__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <p class="user__like">Нравится: 215</p>
+                <div class="user__wrapper">
+                  <img class="user__images" src="img/photo-car-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
+                  <div class="user__wrapper-text">
+                    <cite class="user__author">Левон</cite>
+                    <span class="user__time">(5 часов назад)</span>
+                    <p class="user__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                    <p class="user__like">Нравится: 356</p>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="photo__item user">
+            <li class="user__item">
               <blockquote class="user__post">
-                <img class="user__images" src="img/photo-car-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                <cite class="user__author">Левон</cite>
-                <span class="user__time">(5 часов назад)</span>     
-                <p class="user__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <p class="user__like">Нравится: 356</p>
-              </blockquote>
-            </li>          
-            <li class="photo__item user">
-              <blockquote class="user__post">
-                <img class="user__images" src="img/photo-drumset-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                <cite class="user__author">Антон</cite>
-                <span class="user__time">(12 часов назад)</span>     
-                <p class="user__text">Соседи будут рады!</p>
-                <p class="user__like">Нравится: 666</p>
+                <div class="user__wrapper">
+                  <img class="user__images" src="img/photo-drumset-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
+                  <div class="user__wrapper-text">
+                    <cite class="user__author">Антон</cite>
+                    <span class="user__time">(12 часов назад)</span>
+                    <p class="user__text">Соседи будут рады!</p>
+                    <p class="user__like">Нравится: 666</p>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="photo__item user">
+            <li class="user__item">
               <blockquote class="user__post">
-                <img class="user__images" src="img/photo-window-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                <cite class="user__author">Борис</cite>
-                <span class="user__time">(20 часов назад)</span>     
-                <p class="user__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-                <p class="user__like">Нравится: 215</p>
+                <div class="user__wrapper">
+                  <img class="user__images" src="img/photo-window-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
+                  <div class="user__wrapper-text">
+                    <cite class="user__author">Борис</cite>
+                    <span class="user__time">(20 часов назад)</span>
+                    <p class="user__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                    <p class="user__like">Нравится: 215</p>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="photo__item user">
+            <li class="user__item">
               <blockquote class="user__post">
-                <img class="user__images" src="img/photo-fair-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                <cite class="user__author">Сергей</cite>
-                <span class="user__time">(25 часов назад)</span>     
-                <p class="user__text">Самая кубанская в мире!</p>
-                <p class="user__like">Нравится: 4</p>
+                <div class="user__wrapper">
+                  <img class="user__images" src="img/photo-fair-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
+                  <div class="user__wrapper-text">
+                    <cite class="user__author">Сергей</cite>
+                    <span class="user__time">(25 часов назад)</span>
+                    <p class="user__text">Самая кубанская в мире!</p>
+                    <p class="user__like">Нравится: 4</p>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="photo__item user">
+            <li class="user__item">
               <blockquote class="user__post">
-                <img class="user__images" src="img/photo-pov-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                <cite class="user__author">Максим</cite>
-                <span class="user__time">(40 часов назад)</span>     
-                <p class="user__text">Где снег-то?</p>
-                <p class="user__like">Нравится: 150</p>
+                <div class="user__wrapper">
+                  <img class="user__images" src="img/photo-pov-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
+                  <div class="user__wrapper-text">
+                    <cite class="user__author">Максим</cite>
+                    <span class="user__time">(40 часов назад)</span>
+                    <p class="user__text">Где снег-то?</p>
+                    <p class="user__like">Нравится: 150</p>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="photo__item user">
+            <li class="user__item">
               <blockquote class="user__post">
-                <img class="user__images" src="img/photo-wing-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                <cite class="user__author">Надежда</cite>
-                <span class="user__time">(45 часов назад)</span>     
-                <p class="user__text">Всем GM и взаимные лайки!</p>
-                <p class="user__like">Нравится: 2560</p>
+                <div class="user__wrapper">
+                  <img class="user__images" src="img/photo-wing-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
+                  <div class="user__wrapper-text">
+                    <cite class="user__author">Надежда</cite>
+                    <span class="user__time">(45 часов назад)</span>
+                    <p class="user__text">Всем GM и взаимные лайки!</p>
+                    <p class="user__like">Нравится: 2560</p>
+                  </div>
+                </div>
               </blockquote>
             </li>
           </ul>
         </div>
       </section>
-
       <section class="editor">
-        <div class="container">
-          <h2 class="visually-hidden">Редактор для обработки фотографий</h2>
-          <p class="editor__text">Затмите их всех!
+        <h2 class="visually-hidden">Редактор для обработки фотографий</h2>
+        <div class="editor__wrapper">
+          <p class="editor__text">Затмите их всех!<br>
           Выкладывайте все, что накопилось в телефоне!</p>
-          <div class="editor__wrapper">
+        </div>
+        <div class="editor__wrapper--bg">
+          <div class="editor__wrapper--gray">
             <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Загрузите фото для редактированиям">
-            <div class="editor__toggle">
-              <ul class="editor__list">
-                <li class="editor__item">
-                  <button class="editor__button editor__button--crop" type="button"></button>
-                </li>
-                <li class="editor__item">
-                  <button class="editor__button editor__button--fill" type="button"></button>
-                </li>
-                <li class="editor__item">
-                  <button class="editor__button editor__button--bright" type="button"></button>
-                </li>
-              </ul>
-              <div class="editor__controls controls">
-                <div class="controls__scale">
-                  <div class="controls__bar"></div>
+            <div class="editor__wrapper--column">
+              <div class="editor__toggle">
+                <ul class="editor__list">
+                  <li class="editor__item">
+                    <button class="editor__button editor__button--crop" type="button"></button>
+                  </li>
+                  <li class="editor__item">
+                    <button class="editor__button editor__button--fill" type="button"></button>
+                  </li>
+                  <li class="editor__item">
+                    <button class="editor__button editor__button--bright" type="button"></button>
+                  </li>
+                </ul>
+                <div class="editor__controls controls">
+                  <div class="controls__scale">
+                    <div class="controls__bar"></div>
+                  </div>
+                  <div class="controls__range-toggle"></div>
                 </div>
-                <div class="controls__range-toggle"></div>
               </div>
-              <button class="editor__button button editor__button--post" type="button">Запостить</button>
-              <button class="editor__button button editor__button--reset" type="button">Отмена</button>
+              <div class="editor__wrapper--button">
+                <button class="editor__button button editor__button--post" type="button">Запостить</button>
+                <button class="editor__button button editor__button--reset" type="button">Отмена</button>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="page-footer footer">
-      <div class="container">
-        <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип компании Пинк">
-        <div class="footer__social social">
+    <footer class="footer-inner">
+      <div class="footer-inner__wrapper">
+        <img class="footer-inner__logo footer-logo" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип компании Пинк">
+        <div class="footer-inner__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twiiter" href="#"><span class="visually-hidden">Мы в твитере</span></a>
@@ -164,11 +195,11 @@
             </li>
           </ul>
         </div>
-        <div class="footer__copyright copyright">
+        <div class="footer-inner__copyright copyright">
           <p class="copyright__text">Разработано</p>
           <img class="copyright__logo-image" src="img/htmlacademy.svg" width="147" height="40" alt="Логотип htmlacademy">
         </div>
       </div>
     </footer>
   </body>
- </html>
+</html>

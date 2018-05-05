@@ -1,65 +1,43 @@
 // Подключение блоков
 
-//Центровщик
+// Глобальные переменные
 
-@import "./blocks/container.less";
+@import "variables.less";
 
+//Общие стили
+
+@import "scaffolding.less";
 
 //index.html
 
 @import "./blocks/page-header.less";
+@import "./blocks/main-menu.less";
 @import "./blocks/site-list.less";
 @import "./blocks/promo.less";
-@import "./blocks/page-header__wrapper.less";
 @import "./blocks/download-app.less";
 @import "./blocks/advantages.less";
-@import "./blocks/advantages__wrapper.less";
 @import "./blocks/features-list.less";
+@import "./blocks/research.less";
+@import "./blocks/reviews-wrapper.less";
 @import "./blocks/reviews.less";
 @import "./blocks/price.less";
-@import "./blocks/main-footer.less";
 @import "./blocks/feedback.less";
 @import "./blocks/contacts.less";
+@import "./blocks/page-footer.less";
+@import "./blocks/social.less";
+
 
 //form.html
 
+@import "./blocks/promo-form.less";
 @import "./blocks/form.less";
-@import "./blocks/form__group--progress.less";
-@import "./blocks/form__group--comment.less";
-@import "./blocks/form__legend.less";
-@import "./blocks/page-footer.less";
-@import "./blocks/copyright.less";
+@import "./blocks/footer-inner.less";
 @import "./blocks/button__close.less";
 
 
 //photo.html
 
+@import "./blocks/promo--photo.less";
 @import "./blocks/photo.less";
-@import "./blocks/photo__list.less";
-@import "./blocks/photo__item.less";
 @import "./blocks/user.less";
 @import "./blocks/editor.less";
-@import "./blocks/editor__wrapper.less";
-@import "./blocks/editor__button.less";
-@import "./blocks/editor__button--post.less";
-@import "./blocks/editor__button--reset.less";
-
-
-//Переменные
-
-@color-main: #283645; // основной цвет
-
-//Общие стили
-
-body {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-
-  color: @color-main;
-}
-
-
-
-

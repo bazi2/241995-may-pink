@@ -1,24 +1,108 @@
-@color-main--darken: #f2f2f2; // дополнительный цвет (серый)
-@color-main--light: #ffffff; // дополнительный цвет(белый)
-@color-main: #283645; // основной цвет
-
 .price {
-	line-height: 30px;
-	text-transform: uppercase;
-	background-color: @color-main--darken;
+  width: 320px;
+  margin: 0 auto;
+
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.price__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .price__header {
-	color: @color-main--light;	
-	background-color: @color-main;
+  padding: 20px 0;
+
+  color: @color-main--light;
+  text-align: center;
+  background-color: @color-main;
+}
+
+.price__wrapper--list {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .price__title {
-	font-size: 18px;
-	font-weight: bold;	
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .price__cost {
-	font-size: 24px;
-	font-weight: 300;
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.price__table td {
+  padding: 16px 17px 15px 24px;
+}
+
+.price__toggles {
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  padding-bottom: 47px;
+
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    width: 660px;
+    margin: 0 auto;
+  }
+
+  .price__header {
+    padding-top: 14px;
+    padding-bottom: 10px;
+  }
+
+  .price__wrapper--list {
+    width: 660px;
+  }
+
+  .price__table {
+    width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .price__wrapper {
+    margin-bottom: 30px;
+  }
+
+  .price__header {
+    padding-top: 19px;
+    padding-bottom: 20px;
+  }
+
+  .price__wrapper--list {
+    width: 940px;
+  }
+
+  .price__table td {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: none;
+  }
+
+  .price__toggles {
+    display: none;
+  }
 }

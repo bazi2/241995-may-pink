@@ -1,7 +1,45 @@
-@color-main--dark: #1d2631; // основной цвет
-@color-main--light: #ffffff;  // дополнительный цвет(белый)
-
 .page-header {
-  background-color: @color-main--dark;
-  color: @color-main--light;
+  background-color: @color-main;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  margin: 0 auto;
+
+  background-color: @color-main;
+}
+
+.page-header__logo {
+  margin: 23px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    width: 660px;
+    padding: 0;
+  }
+
+  .page-header__logo {
+    margin: 30px 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    margin: 0;
+
+    //ПОЧЕМУ ФОН НЕ РАБОТАЕТ??????
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .page-header__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 130px;
+  }
 }

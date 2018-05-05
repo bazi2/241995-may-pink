@@ -1,18 +1,146 @@
-@color-hover: #d22856; // Цвет при нажатии (лого)
+.user__post {
+  margin: 0;
+}
+
+.user__items--big {
+  margin-bottom: 20px;
+}
+
+.user__images--panorama-big {
+  display: none;
+}
+
+.user__images--panorama-biggest {
+  display: none;
+}
+
+.user__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  color: @color-main--dark;
+
+  background-color: @color-main--darken;
+}
+
+.user__wrapper-text {
+  padding: 20px 18px 26px 18px;
+}
 
 .user__author {
-	font-weight: bold;
-	font-style: normal;
+  font-weight: bold;
+  font-style: normal;
 }
 
 .user__time {
-	font-size: 12px;
-	font-weight: 300;
-	text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.user__text {
+  margin: 0;
+  margin-bottom: 14px;
 }
 
 .user__like {
-	color: @color-hover;
-	font-size: 12px;
-	text-transform: uppercase;
+  margin: 0;
+  color: @color-hover;
+  text-transform: uppercase;
+}
+
+.user__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user__item {
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .user__items--big {
+    margin-bottom: 50px;
+  }
+
+  .user__images--panorama {
+    display: none;
+  }
+
+  .user__images--panorama-big {
+    display: block;
+  }
+
+  .user__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0;
+  }
+
+  .user__wrapper--big {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .user__wrapper-text--big {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+
+  .user__author--big {
+    margin-right: 4px;
+  }
+
+  .user__text--big {
+    order: 2;
+  }
+
+  .user__like--big {
+    margin-left: auto;
+  }
+
+  .user__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .user__item {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+
+    background-color: @color-main--darken;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user__images--panorama-big {
+    display: none;
+  }
+
+  .user__images--panorama-biggest {
+    display: block;
+  }
+
+  .user__wrapper--big {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .user__wrapper-text--big {
+    padding: 28px 31px 22px 27px;
+  }
+
+  .user__list {
+    width: 940px;
+  }
 }

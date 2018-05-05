@@ -1,9 +1,61 @@
-@color-main--light: #ffffff; // дополнительный цвет(белый)
-
 .photo {
   background-color: @color-main--light;
 }
 
+.photo__wrapper--description {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 47px;
+  padding-bottom: 49px;
+  background-color: @color-main--light;
+}
+
 .photo__description {
-	line-height: 30px;
+  margin: 0;
+  padding: 0 18px;
+  line-heigh: 30px;
+  text-align: center;
+}
+
+.photo__posts {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__wrapper--description {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .photo__description {
+    padding: 94px 72px 74px 72px;
+    font-size: 18px;
+  }
+
+  .photo__posts {
+    width: 660px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__wrapper--description {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .photo__description {
+    padding: 95px 175px 86px 175px;
+  }
+
+  .photo__posts {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
