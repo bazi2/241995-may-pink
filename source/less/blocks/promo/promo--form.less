@@ -1,0 +1,46 @@
+
+.promo--form {
+  padding: 99px 20px 50px 20px;
+  margin: 0 auto;
+  margin-top: -66px;
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-color: @color-main;
+}
+
+.promo__title--form {
+  padding: 0 25px;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+@media(min-width: @tablet-width) {
+  .promo--form {
+    padding: 188px 20px 72px 20px;
+    margin-top: -110px;
+
+    background-image: url("../img/back-tablet@1x.jpg");
+
+    .promo__title--form {
+      padding: 0 70px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo--form {
+    margin-top: -116px;
+    padding: 181px 20px 95px 20px;
+    background-image: url("../img/back-desktop.jpg");
+  }
+
+  .promo__title--form {
+    padding: 0 90px;
+  }
+}

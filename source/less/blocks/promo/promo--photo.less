@@ -1,0 +1,61 @@
+.promo--photo {
+  height: 55px;
+  margin: 0 auto;
+  margin-top: -65px;
+  padding: 98px 0 84px 0;
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-color: @color-main;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 0 50px;
+
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+
+  color: @color-main--light;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .promo--photo {
+    height: 170px;
+    margin: 0 auto;
+    margin-top: -110px;
+    padding-top: 187px;
+
+    background-image: url("../img/back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
+
+  .promo__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo--photo {
+    margin: 0 auto;
+    margin-top: -116px;
+    height: 135px;
+    padding-top: 180px;
+
+    background-image: url("../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
+
+  .promo__title {
+    padding: 0 400px;
+  }
+}

@@ -1,0 +1,151 @@
+.price__table--full {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .table-wrapper {
+    display: none;
+  }
+
+  .price__table--full {
+    display: block;
+    width: 620px;
+    margin: 0 auto;
+
+    border-collapse: collapse;
+    box-sizing: border-box;
+
+    th {
+      padding: 14px 0 9px 0;
+
+      color: @color-main--light;
+      line-height: 30px;
+
+      text-align: center;
+      text-transform: uppercase;
+      background-color: @color-main;
+
+      border-right: 2px solid #eeeeee;
+
+      span {
+        display: block;
+      }
+
+      .price__title--hit {
+        position: relative;
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          top: -14px;
+          left: 0;
+
+          width: 60px;
+          height: 60px;
+
+          background-image: url("../img/bg-hit-tablet.svg");
+          background-repeat: no-repeat;
+        }
+
+        &::after {
+          content: "хит";
+
+          position: absolute;
+          top: -8px;
+          left: 4px;
+
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 30px;
+
+          color: @color-main--light;
+
+          text-transform: normal;
+
+          transform: rotate(-45deg);
+        }
+      }
+
+      .price__title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .price__cost {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+
+    .visibility {
+      visibility: hidden;
+      border-bottom: 2px solid #eeeeee;
+      border-right: 2px solid @color-main;
+    }
+
+    th {
+      border-bottom: 2px solid @color-main;
+    }
+
+    th:last-child {
+      border-right: 2px solid @color-main;
+    }
+
+    td {
+      width: 152px;
+      padding: 7px 15px;
+
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+
+      background-color: @color-main--light;
+
+      border: 2px solid #eeeeee;
+    }
+
+    .price__value {
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__table--full {
+    width: 940px;
+    margin: 0 auto;
+
+    th {
+      padding: 22px 0 16px 0;
+
+      .price__title {
+        font-size: 18px;
+      }
+
+      .price__cost {
+        font-size: 24px;
+      }
+
+      .price__title--hit::before {
+        top: -21px;
+        width: 73px;
+        height: 73px;
+
+        background-image: url("../img/bg-hit.svg");
+      }
+
+      .price__title--hit::after {
+        top: -8px;
+        left: 10px;
+      }
+    }
+
+    td {
+      width: 234px;
+
+      padding: 16px 24px 12px 24px;
+      font-size: 18px;
+    }
+  }
+}
