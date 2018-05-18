@@ -1,3 +1,25 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+}
+
+
+@font-face {
+  font-weight: light;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -6,25 +28,10 @@ body {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  font-style: normal;
   line-height: 24px;
 
   color: @color-main;
-}
-
-@media (min-width: @tablet-width) {
-  .page-inner {
-    background: url("../img/pink-form-tablet.jpg") no-repeat 50% 0;
-    background-size: 620px auto;
-    min-height: 3630px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-inner {
-    background: url("../img/pink-form-desktop.jpg") no-repeat 50% 0;
-    background-size: 1200px auto;
-    min-height: 4215px;
-  }
 }
 
 img {

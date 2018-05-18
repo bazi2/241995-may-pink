@@ -1,0 +1,36 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 128px;
+}
+
+.copyright__text {
+  margin: 0;
+
+  line-height: 18px;
+}
+
+.copyright__link path {
+  fill: @color-hover;
+
+  &:hover,
+  &:focus {
+    fill: @color-main;
+  }
+
+  &:active {
+    fill: rgba(40, 54, 69, 0.3);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    width: 150px;
+  }
+
+  .copyright__text {
+    font-size: 18px;
+  }
+}
