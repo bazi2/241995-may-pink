@@ -3,8 +3,6 @@
 
   width: 320px;
   margin: 0 auto;
-
-  margin: 0;
   padding: 0;
   padding-bottom: 99px;
 
@@ -133,9 +131,9 @@
   }
 }
 
-#toggle-1:checked ~ .table__controls label[for="toggle-1"],
-#toggle-2:checked ~ .table__controls label[for="toggle-2"],
-#toggle-3:checked ~ .table__controls label[for="toggle-3"] {
+#toggle-1:checked ~ .table__controls label:nth-child(1),
+#toggle-2:checked ~ .table__controls label:nth-child(2),
+#toggle-3:checked ~ .table__controls label:nth-child(3) {
   background-color: transparent;
   border: 2px solid @color-main;
 }
