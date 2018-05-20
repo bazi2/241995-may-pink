@@ -148,7 +148,7 @@
     width: auto;
     margin: 0;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
   }
 
   .main-menu__wrapper {
@@ -158,11 +158,13 @@
     padding-bottom: 43px;
     flex-direction: row;
     justify-content: space-between;
-
-    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .main-menu__toggle {
     display: none;
+  }
+
+  .main-menu--closed .main-menu__wrapper {
+    background-color: transparent;
   }
 }
