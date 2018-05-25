@@ -1,148 +1,309 @@
-.price__table--full {
-  display: none;
+.price__slider {
+  position: relative;
+
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 95px;
+
+  overflow: hidden;
+}
+
+.price__controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 41px;
+  left: 50%;
+
+  margin: 0;
+  padding: 0;
+  margin-left: -30px;
+
+  width: 60px;
+
+  list-style: none;
+}
+
+.price__toggle-active {
+  display: block;
+  width: 6px;
+  height: 6px;
+
+  background-color: #b9bcc1;
+  border-radius: 50%;
+  border: 2px solid @color-main--darken;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #7e868f;
+  }
+
+  &:active {
+    background-color: #eaeced;
+  }
+}
+
+.price__toggle:checked + .price__toggle-active {
+  background-color: transparent;
+  border: 2px solid @color-main;
+}
+
+.price__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  transform: translateX(-543px);
+}
+
+.price__item {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 280px;
+  margin: 0 auto;
+
+  border-right: 2px solid #eeeeee;
+}
+
+.price__header {
+  position: relative;
+
+  padding: 16px 15px 19px;
+  color: @color-main--light;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: @color-main;
+}
+
+.price__item:nth-child(3) .price__header::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 73px;
+  height: 73px;
+
+  background-image: url("../img/bg-hit.svg");
+}
+
+.price__item:nth-child(3) .price__header::after {
+  content: "хит";
+
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+
+  line-height: 30px;
+
+  transform: rotate(-45deg);
+}
+
+.price__title {
+  display: block;
+  margin-bottom: 2px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.price__cost {
+  font-size: 24px;
+  font-weight: light;
+  line-height: 30px;
+}
+
+.price__field {
+  background-color: @color-main--light;
+}
+
+.price__item:first-child .price__field {
+  border-left: 2px solid #eeeeee;
+}
+
+.price__value {
+  position: relative;
+
+  margin: 0;
+  padding: 15px 23px;
+  padding-right: 49px;
+
+  color: @color-main;
+  font-size: 14px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+
+  border-bottom: 2px solid #eeeeee;
+}
+
+.price__icon {
+  position: absolute;
+  right: 21px;
+}
+
+.price__icon--yes svg {
+  fill: #3dc644;
+  width: 30px;
+  height: 30px;
+}
+
+.price__icon--no svg {
+  fill: #f25b26;
 }
 
 @media (min-width: @tablet-width) {
-  .table-wrapper {
+  .price__slider {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    overflow: visible;
+  }
+
+  .price__list {
+    display: flex;
+
+    box-sizing: border-box;
+    transform: translateX(0);
+  }
+
+  .price__item:first-child .price__header {
+    visibility: hidden;
+  }
+
+  .price__value {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 14px;
+  }
+
+  .price__item:first-child .price__value {
+    padding-right: 0;
+  }
+
+  .price__item:first-child .price__value:first-child {
+    margin-top: -2px;
+    border-top: 2px solid #eeeeee;
+  }
+
+  .price__text {
+    font-size: 0;
+    line-height: 30px;
+  }
+
+  .price__item {
+    width: 153px;
+  }
+
+  .price__item:first-child .price__text {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: none;
+  }
+
+  .price__item:first-child .price__icon {
     display: none;
   }
 
-  .price__table--full {
-    display: block;
-    width: 620px;
-    margin: 0 auto;
+  .price__title {
+    font-size: 16px;
+  }
 
-    border-collapse: collapse;
-    box-sizing: border-box;
+  .price__cost {
+    font-size: 18px;
+  }
 
-    th {
-      padding: 14px 0 9px 0;
+  .price__header {
+    padding: 10px 10px 6px;
+  }
 
-      color: @color-main--light;
-      line-height: 30px;
+  .price__icon--yes {
+    left: 71px;
+    height: 8px;
+  }
 
-      text-align: center;
-      text-transform: uppercase;
-      background-color: @color-main;
+  .price__icon--yes svg {
+    width: 30px;
+    height: 30px;
+  }
 
-      border-right: 2px solid #eeeeee;
-      border-bottom: 2px solid @color-main;
+  .price__icon--no {
+    left: 63px
+  }
 
-      span {
-        display: block;
-      }
+  .price__item:nth-child(3) .price__header::before {
+    width: 61px;
+    height: 61px;
 
-      .price__title--hit {
-        position: relative;
+    background-image: url("../img/bg-hit-tablet.svg");
+  }
 
-        &::before {
-          content: "";
+  .price__item:nth-child(3) .price__header::after {
+    top: 7px;
+    left: 4px;
+  }
 
-          position: absolute;
-          top: -14px;
-          left: 0;
-
-          width: 60px;
-          height: 60px;
-
-          background-image: url("../img/bg-hit-tablet.svg");
-          background-repeat: no-repeat;
-        }
-
-        &::after {
-          content: "хит";
-
-          position: absolute;
-          top: -8px;
-          left: 4px;
-
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 30px;
-
-          color: @color-main--light;
-
-          text-transform: normal;
-
-          transform: rotate(-45deg);
-        }
-      }
-
-      .price__title {
-        font-size: 16px;
-        font-weight: bold;
-      }
-
-      .price__cost {
-        font-size: 18px;
-        font-weight: 300;
-      }
-    }
-
-    .visibility {
-      visibility: hidden;
-      border-bottom: 2px solid #eeeeee;
-      border-right: 2px solid @color-main;
-    }
-
-    th:last-child {
-      border-right: 2px solid @color-main;
-    }
-
-    td {
-      width: 152px;
-      padding: 7px 15px;
-
-      font-size: 14px;
-      line-height: 30px;
-      text-align: center;
-
-      background-color: @color-main--light;
-
-      border: 2px solid #eeeeee;
-    }
-
-    .price__value {
-      text-align: left;
-    }
+  .price__controls {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .price__table--full {
+  .price__slider {
     width: 940px;
-    margin: 0 auto;
+  }
 
-    th {
-      padding: 22px 0 16px 0;
+  .price__list {
+    width: 940px;
+    margin-left: 7px;
+  }
 
-      .price__title {
-        font-size: 18px;
-      }
+  .price__item {
+    display: flex;
+    flex-direction: column;
+  }
 
-      .price__cost {
-        font-size: 24px;
-      }
+  .price__title {
+    font-size: 18px;
+  }
 
-      .price__title--hit::before {
-        top: -21px;
-        width: 73px;
-        height: 73px;
+  .price__cost {
+    font-size: 24px;
+  }
 
-        background-image: url("../img/bg-hit.svg");
-      }
+  .price__header {
+    padding: 14px 15px 22px 20px;
+  }
 
-      .price__title--hit::after {
-        top: -8px;
-        left: 10px;
-      }
-    }
+  .price__item:first-child .price__text {
+    font-size: 18px;
+  }
 
-    td {
-      width: 234px;
+  .price__field {
+    display: flex;
+    flex-direction: column;
+  }
 
-      padding: 16px 24px 12px 24px;
-      font-size: 18px;
-    }
+  .price__value {
+    display: flex;
+    padding: 14px 22px;
+  }
+
+  .price__icon--yes {
+    left: 105px;
+  }
+
+  .price__icon--no {
+    left: 105px;
   }
 }

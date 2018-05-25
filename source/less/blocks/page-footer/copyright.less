@@ -1,15 +1,21 @@
 .copyright {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
-  width: 128px;
+  width: 120px;
 }
 
 .copyright__text {
   margin: 0;
 
   line-height: 18px;
+}
+
+.copyright__link {
+  display: block;
+
+  margin-top: 3px;
+  margin-left: 14px;
 }
 
 .copyright__link path {
@@ -25,6 +31,14 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    display: block;
+    margin-top: 9px;
+    margin-left: 11px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .copyright {
     width: 150px;
@@ -32,5 +46,11 @@
 
   .copyright__text {
     font-size: 18px;
+    margin-left: 6px;
+  }
+
+  .copyright__link {
+    margin-top: 9px;
+    margin-left: 18px;
   }
 }

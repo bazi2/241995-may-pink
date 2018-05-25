@@ -10,41 +10,33 @@
   </head>
   <body>
     <header class="page-header">
+      <a class="page-header__logo"></a>
       <nav class="main-menu main-menu--opened main-menu--nojs">
         <div class="main-menu__wrapper">
-          <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <div class="logo">
-            <a class="logo__link logo__link--mobile" href="index.html">
-              <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип компании «PINK»">
-            </a>
-            <a class="logo__link logo__link--tablet" href="index.html">
-              <img class="logo__image"" src="img/logotype-white-tablet.png" width="147" height="40" alt="Логотип компании «PINK»">
-            </a>
-            <a class="logo__link logo__link--desktop" href="index.html">
-              <img class="logo__image" src="img/logotype-white-desktop.png" width="150" height="43" alt="Логотип компании «PINK»">
-            </a>
+          <div class="main-menu__toggle">
+            <button class="main-menu__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
-          <ul class="main-menu__list site-list">
-            <li class="site-list__item">
-              <a class="site-link" href="index.html">Главная</a>
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-link" href="photo.html">Фотографии</a>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="photo.html">Фотографии</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-link site-link--current">Конкурс</a>
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--current">Конкурс</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-link" href="https://htmlacademy.ru">Html Academy</a>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="https://htmlacademy.ru">Html Academy</a>
             </li>
           </ul>
         </div>
       </nav>
-    </header>
 
-    <section class="promo promo--form">
-      <h1 class="promo__title promo__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
-    </section>
+      <div class="promo promo--inner promo--inner-form">
+        <h1 class="promo__title promo__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
+    </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Форма регистрации</h1>
@@ -103,7 +95,7 @@
                 <label for="phone-field">Номер телефона</label>
                 <input id="phone-field" name="phone" type="text" placeholder="Номер, пожалуйста">
               </p>
-              <p>
+              <p class="form__group--contacts-mail">
                 <label for="email-field">адрес почты</label>
                 <input id="email-field" name="email" type="text" placeholder="Введите почту *" required>
               </p>
@@ -118,7 +110,7 @@
                 </li>
                 <li>
                   <input class="visually-hidden" id="android-field" type="radio" name="appstore" value="android">
-                  <label for="android-field">Pink на Android</label>
+                  <label class="form__group--apps-label" for="android-field">Pink на Android</label>
                 </li>
                 <li>
                   <input class="visually-hidden" id="windows-field" type="radio" name="appstore" value="windows">
@@ -147,13 +139,13 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper footer__wrapper--inner-form">
         <div class="footer__logo logo-footer">
-          <a class="logo-footer__link logo-footer__link--mobile">
-            <img class="logo-footer__image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип компании Пинк">
-          </a>
-          <a class="logo-footer__link logo-footer__link--desktop">
-            <img class="logo-footer__image" src="img/logotype-blue-desktop.png" width="147" height="40" alt="Логотип компании Пинк">
+          <a class="logo-footer__link" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+              <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип компании Пинк">
+            </picture>
           </a>
         </div>
         <div class="footer__social social">

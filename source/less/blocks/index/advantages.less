@@ -10,15 +10,19 @@
 }
 
 .advantages__wrapper--text {
-  padding-top: 43px;
+  padding-top: 311px;
   padding-bottom: 30px;
-  margin-bottom: 84px;
+  margin-bottom: 64px;
+}
+
+.advantages__wrapper--image-top {
+  display: none;
 }
 
 .advantages__text {
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
   font-size: 24px;
   font-weight: 300;
   line-height: 30px;
@@ -41,19 +45,25 @@
 
 .advantages__list {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   padding: 0 6px;
   list-style: none;
   text-align: center;
 }
 
 .advantages__wrapper--image {
+  position: relative;
   width: 280px;
+  height: 277px;
   padding: 0 20px;
   margin: 0 auto;
+
+  overflow: hidden;
 }
 
 .advantages__image {
+  position: absolute;
+  bottom: -43px;
   margin: 0 40px;
   width: 157px;
   height: 320px;
@@ -61,7 +71,7 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
-    background-image: linear-gradient(175deg, @color-main--light 0%, @color-main--light 305px, @color-main--darken 305px);
+    background-image: linear-gradient(175deg, @color-main--light 0%, @color-main--light 273px, @color-main--darken 273px);
   }
 
   .advantages__wrapper {
@@ -71,8 +81,9 @@
 
   .advantages__wrapper--text {
     margin-bottom: 0;
-    padding-top: 55px;
-    padding-bottom: 25px;
+    padding-top: 28px;
+    padding-left: 6px;
+    padding-bottom: 50px;
   }
 
   .advantages__text {
@@ -95,18 +106,22 @@
 
   .advantages__list {
     order: 2;
+    padding: 0;
     width: 310px;
     margin-bottom: 0;
-    padding-top: 73px;
+    margin-top: 54px;
   }
 
   .advantages__wrapper--image {
-    width: 268px;
+    width: 300px;
+    height: 481px;
     padding: 0;
   }
 
   .advantages__image {
+    bottom: 0;
     width: 268px;
+    height: 481px;
     margin: 0;
   }
 }
@@ -122,14 +137,35 @@
   }
 
   .advantages__wrapper--text {
-    padding-top: 75px;
-    padding-bottom: 70px;
+    padding-top: 46px;
+    padding-bottom: 77px;
+    padding-left: 20px;
   }
 
   .advantages__text {
     margin-bottom: 0;
     font-size: 50px;
     line-height: 60px;
+  }
+
+  .advantages__wrapper--image-top {
+    display: block;
+
+    picture {
+      display: flex;
+      justify-content: space-around;
+      width: 940px;
+    }
+
+    .advantages__image-top {
+      width: 300px;
+      height: 300px;
+      margin-left: 13px;
+    }
+
+    .advantages__image-top--center {
+      margin-left: 24px;
+    }
   }
 
   .advantages__wrapper--list {
@@ -139,7 +175,6 @@
   .advantages__list {
     display: flex;
     width: 940px;
-    padding-top: 357px;
   }
 
   .advantages__wrapper--image {

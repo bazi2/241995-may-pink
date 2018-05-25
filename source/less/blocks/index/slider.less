@@ -1,9 +1,6 @@
 .slider {
   position: relative;
   padding-bottom: 87px;
-
-  //Временно
-  outline: 2px solid blue;
 }
 
 .slider__list {
@@ -30,7 +27,7 @@
 .slider__author-name {
   display: block;
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 14px;
 
   font-size: 18px;
   font-weight: bold;
@@ -61,14 +58,11 @@
   align-items: center;
 
   position: absolute;
-  bottom: 44px;
+  bottom: 37px;
   left: 50%;
 
   margin-left: -30px;
   width: 60px;
-
-  //Временно
-  outline: 2px solid red;
 }
 
 .slider__controls label {
@@ -91,9 +85,7 @@
   }
 }
 
-#item-1:checked ~ .slider__controls label:nth-child(1),
-#item-2:checked ~ .slider__controls label:nth-child(2),
-#item-3:checked ~ .slider__controls label:nth-child(3) {
+.slider__input:checked + label {
   background-color: transparent;
   border: 3px solid @color-main;
 }
@@ -125,6 +117,7 @@
     order: 2;
 
     margin: 0;
+    margin-bottom: 2px;
 
     font-size: 20px;
     line-height: 30px;
@@ -138,7 +131,7 @@
   }
 
   .slider__controls {
-    bottom: 24px;
+    bottom: 17px;
   }
 }
 
@@ -177,15 +170,27 @@
 
     cursor: pointer;
 
-    //Временно
-    background-color: red;
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   .slider__prev {
     left: 0;
+
+    background-image: url("../img/icon-review-arrow-left.svg");
   }
 
   .slider__next {
     right: 0;
+
+    background-image: url("../img/icon-review-arrow-right.svg");
   }
 }

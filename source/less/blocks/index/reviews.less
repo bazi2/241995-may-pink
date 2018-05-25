@@ -1,24 +1,44 @@
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-image: linear-gradient(175deg, @color-main--light 0%, @color-main--light 377px, @color-main--darken 377px);
+}
+
 .reviews {
   width: 280px;
   margin: 0 auto;
-  padding: 43px 20px 113px 20px;
+  padding: 42px 20px 90px 20px;
 }
 
 @media (min-width: @tablet-width) {
+  .reviews-wrapper {
+    padding-bottom: 66px;
+
+    background-image: linear-gradient(176deg, @color-main--light 0%, @color-main--light 340px, @color-main--darken 340px);
+  }
+
   .reviews {
     width: 620px;
     margin: 0 auto;
-    padding: 42px 20px 109px 20px;
+    padding: 38px 20px 86px 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .reviews-wrapper {
+    padding-bottom: 96px;
+
+    background-image: linear-gradient(176deg, @color-main--light 0%, @color-main--light 495px, @color-main--darken 495px);
+  }
+
   .reviews {
     position: relative;
 
     width: 940px;
     marign: 0 auto;
-    padding: 188px 130px 147px 130px;
+    padding: 188px 130px 145px 130px;
 
     &::after {
       position: absolute;
@@ -29,10 +49,11 @@
 
       content: "";
 
-      width: 80px;
-      height: 63px;
+      width: 78px;
+      height: 65px;
 
-      background-color: black;
+      background-image: url("../img/icon-quotes.svg");
+      opacity: 0.05;
     }
   }
 }

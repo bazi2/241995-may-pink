@@ -1,18 +1,33 @@
 .appstore-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-
-  width: 205px;
+  align-items: flex-end;
   margin: 0;
-  padding: 0;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
+  padding: 0 14%;
+
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+
   list-style: none;
 }
 
+.promo__text {
+  color: @color-main--light;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .appstore-list {
+    padding: 0 15%;
+    margin-bottom: 37px;
+  }
+}
+
 @media (min-width: @desktop-width) {
-  .download-app__list {
-    margin-bottom: 57px;
+  .appstore-list {
+    margin-bottom: 56px;
   }
 }

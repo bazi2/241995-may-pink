@@ -1,14 +1,23 @@
 .features-list__title {
+  margin-bottom: 12px;
   color: @color-main--black;
   font-size: 18px;
   font-weight: bold;
 }
 
+.features-list__text {
+  margin-bottom: 31px;
+}
+
 @media (min-width: @tablet-width) {
   .features-list__item {
-    margin-bottom: 38px;
     padding-right: 5px;
+    padding-left: 10px;
     text-align: left;
+  }
+
+  .features-list__title {
+    margin-bottom: 14px;
   }
 }
 
@@ -21,21 +30,23 @@
   }
 
   .features-list__item {
-    width: 240px;
+    width: 300px;
     margin-bottom: 0;
   }
 
   .features-list__title {
     margin: 0;
     margin-bottom: 20px;
+    padding: 0 35px;
+
     font-size: 30px;
-    line-height: 36px;
+    line-height: 32px;
     text-align: center;
   }
 
   .features-list__text {
     margin: 0;
-    padding-right: 2px;
+    padding: 0 35px;
 
     font-size: 18px;
     line-height: 30px;

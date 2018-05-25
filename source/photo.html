@@ -9,42 +9,34 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+     <header class="page-header">
+      <a class="page-header__logo"></a>
       <nav class="main-menu main-menu--opened main-menu--nojs">
         <div class="main-menu__wrapper">
-          <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <div class="logo">
-            <a class="logo__link logo__link--mobile" href="index.html">
-              <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип компании «PINK»">
-            </a>
-            <a class="logo__link logo__link--tablet" href="index.html">
-              <img class="logo__image"" src="img/logotype-white-tablet.png" width="147" height="40" alt="Логотип компании «PINK»">
-            </a>
-            <a class="logo__link logo__link--desktop" href="index.html">
-              <img class="logo__image" src="img/logotype-white-desktop.png" width="150" height="43" alt="Логотип компании «PINK»">
-            </a>
+          <div class="main-menu__toggle">
+            <button class="main-menu__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
-          <ul class="main-menu__list site-list">
-            <li class="site-list__item">
-              <a class="site-link" href="index.html">Главная</a>
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="index.html">Главная</a>
             </li>
-            <li class="site-list__item site-link--current">
-              <a class="site-link">Фотографии</a>
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--current">Фотографии</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-link" href="form.html">Конкурс</a>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="form.html">Конкурс</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-link" href="https://htmlacademy.ru">Html Academy</a>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="https://htmlacademy.ru">Html Academy</a>
             </li>
           </ul>
         </div>
       </nav>
-    </header>
 
-    <section class="promo promo--photo">
-      <h1 class="promo__title">Фотографии пользователей</h1>
-    </section>
+      <div class="promo promo--inner">
+        <h1 class="promo__title promo__title--photo">Фотографии пользователей</h1>
+      </div>
+    </header>
 
     <main class="page-main">
       <section class="photo">
@@ -54,10 +46,14 @@
         </div>
         <div class="photo__posts user">
           <div class="photo__items user__items user__items--big">
-            <blockquote class="user__post user__post--big">
-              <img class="user__images user__images--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото пользователя">
-              <img class="user__images user__images--panorama-big" src="img/panorama-tablet.jpg" width="660" height="509" alt="Фото пользователя">
-              <img class="user__images user__images--panorama-biggest" src="img/panorama-desktop.jpg" width="1200" height="509" alt="Фото пользователя">
+            <div class="user__post user__post--big">
+              <a class="user__link-big">
+                <picture class="user__picture">
+                  <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                  <source class="user__images--panorama-tablet" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+                  <img class="user__images user__images--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg" alt="Фото пользователя">
+                </picture>
+              </a>
               <div class="user__wrapper user__wrapper--big">
                 <div class="user__wrapper-text user__wrapper-text--big">
                   <cite class="user__author user__author--big">Анна <span class="user__time">(5 минут назад)</span></cite>
@@ -65,14 +61,20 @@
                   <p class="user__like user__like--big">Нравится: 215</p>
                 </div>
               </div>
-            </blockquote>
+            </div>
           </div>
           <ul class="photo__items user__list">
             <li class="user__item">
               <blockquote class="user__post">
                 <div class="user__wrapper">
-                  <img class="user__images" src="img/photo-car-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                  <div class="user__wrapper-text">
+                  <a class="user__link" href="#">
+                    <picture class="user__picture">
+                      <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                      <img class="user__images" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg" alt="Фото пользователя">
+                    </picture>
+                  </a>
+                  <div class="user__wrapper-text user__wrapper-text--short">
                     <cite class="user__author">Левон <span class="user__time">(5 часов назад)</span></cite>
                     <p class="user__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
                     <p class="user__like">Нравится: 356</p>
@@ -83,8 +85,14 @@
             <li class="user__item">
               <blockquote class="user__post">
                 <div class="user__wrapper">
-                  <img class="user__images" src="img/photo-drumset-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                  <div class="user__wrapper-text">
+                  <a class="user__link" href="#">
+                    <picture class="user__picture">
+                      <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                      <img class="user__images" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg" alt="Фото пользователя">
+                    </picture>
+                  </a>
+                  <div class="user__wrapper-text user__wrapper-text--short">
                     <cite class="user__author">Антон <span class="user__time">(12 часов назад)</span></cite>
                     <p class="user__text">Соседи будут рады!</p>
                     <p class="user__like">Нравится: 666</p>
@@ -95,8 +103,14 @@
             <li class="user__item">
               <blockquote class="user__post">
                 <div class="user__wrapper">
-                  <img class="user__images" src="img/photo-window-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                  <div class="user__wrapper-text">
+                  <a class="user__link" href="#">
+                    <picture class="user__picture">
+                      <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                      <img class="user__images" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg" alt="Фото пользователя">
+                    </picture>
+                  </a>
+                  <div class="user__wrapper-text user__wrapper-text--short">
                     <cite class="user__author">Борис <span class="user__time">(20 часов назад)</span></cite>
                     <p class="user__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
                     <p class="user__like">Нравится: 215</p>
@@ -107,8 +121,14 @@
             <li class="user__item">
               <blockquote class="user__post">
                 <div class="user__wrapper">
-                  <img class="user__images" src="img/photo-fair-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                  <div class="user__wrapper-text">
+                  <a class="user__link" href="#">
+                    <picture class="user__picture">
+                      <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                      <img class="user__images" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg" alt="Фото пользователя">
+                    </picture>
+                  </a>
+                  <div class="user__wrapper-text user__wrapper-text--short">
                     <cite class="user__author">Сергей <span class="user__time">(25 часов назад)</span></cite>
                     <p class="user__text">Самая кубанская в мире!</p>
                     <p class="user__like">Нравится: 4</p>
@@ -119,8 +139,14 @@
             <li class="user__item">
               <blockquote class="user__post">
                 <div class="user__wrapper">
-                  <img class="user__images" src="img/photo-pov-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                  <div class="user__wrapper-text">
+                  <a class="user__link" href="#">
+                    <picture class="user__picture">
+                      <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                      <img class="user__images" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg" alt="Фото пользователя">
+                    </picture>
+                  </a>
+                  <div class="user__wrapper-text user__wrapper-text--short">
                     <cite class="user__author">Максим <span class="user__time">(40 часов назад)</span></cite>
                     <p class="user__text">Где снег-то?</p>
                     <p class="user__like">Нравится: 150</p>
@@ -131,8 +157,14 @@
             <li class="user__item">
               <blockquote class="user__post">
                 <div class="user__wrapper">
-                  <img class="user__images" src="img/photo-wing-mobile@1x.jpg" width="" height="" alt="Фото пользователя">
-                  <div class="user__wrapper-text">
+                  <a class="user__link" href="#">
+                    <picture class="user__picture">
+                      <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                      <img class="user__images" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg" alt="Фото пользователя">
+                    </picture>
+                  </a>
+                  <div class="user__wrapper-text user__wrapper-text--short">
                     <cite class="user__author">Надежда <span class="user__time">(45 часов назад)</span></cite>
                     <p class="user__text">Всем GM и взаимные лайки!</p>
                     <p class="user__like">Нравится: 2560</p>
@@ -151,79 +183,68 @@
         </div>
         <div class="editor__wrapper--bg">
           <div class="editor__wrapper--gray">
-            <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Загрузите фото для редактированиям">
+            <picture class="editor__picture">
+              <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <img class="editor__images" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg" alt="Загрузите фото для редактированиям">
+            </picture>
             <div class="editor__wrapper--column">
-              <div class="editor__toggle">
+              <div class="editor__wrapper--list">
                 <ul class="editor__list">
                   <li class="editor__item">
-                    <button class="editor__button-icon editor__button--crop" type="button">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                      <path fill="none" d="M0,0h48v48H0V0z"/>
+                    <button class="editor__button-icon editor__button--crop editor__button-icon--active" type="button">
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path fill="none" d="M0,0h48v48H0V0z"/>
                       <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
                       </svg>
                     </button>
+                    <div class="range range--crop">
+                      <div class="range__controls">
+                        <div class="range__scale">
+                          <div class="range__bar"></div>
+                        </div>
+                        <button class="range__toggle"><span class="visually-hidden">Обрезание</span></button>
+                      </div>
+                    </div>
                   </li>
                   <li class="editor__item">
-                    <button class="editor__button-icon editor__button--fill" type="button"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path fill="none" d="M0,0h48v48H0V0z"/><path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/><rect y="40" width="48" height="3"/></svg>
+                    <button class="editor__button-icon editor__button--fill" type="button">
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path fill="none" d="M0,0h48v48H0V0z"/>
+                      <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+                      <rect y="40" width="48" height="3"/>
+                      </svg>
                     </button>
+                    <div class="range range--fill">
+                      <div class="range__controls">
+                        <div class="range__scale">
+                          <div class="range__bar"></div>
+                        </div>
+                        <button class="range__toggle"><span class="visually-hidden">Заливка</span></button>
+                      </div>
+                    </div>
                   </li>
                   <li class="editor__item">
-                    <button class="editor__button-icon editor__button--bright" type="button"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve"><path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/><path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
-                    </svg>
-                  </button>
+                    <button class="editor__button-icon editor__button--bright" type="button">
+                      <svg class="editor__fill" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve"><path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+                      <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+                      </svg>
+                    </button>
+                    <div class="range range--bright">
+                      <div class="range__controls">
+                        <div class="range__scale">
+                          <div class="range__bar"></div>
+                        </div>
+                        <button class="range__toggle"><span class="visually-hidden">Заливка</span></button>
+                      </div>
+                    </div>
                   </li>
                 </ul>
-                <ul class="editor__list--tablet">
-                  <li class="editor__item--tablet">
-                    <button class="editor__button-icon editor__button-icon--tablet editor__button--crop-tablet" type="button">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                      <path fill="none" d="M0,0h48v48H0V0z"/>
-                      <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
-                      </svg>
-                    </button>
-                    <div class="controls__scale controls__scale--tablet controls__scale--tablet-crop"></div>
-                  </li>
-                  <li class="editor__item--tablet">
-                    <button class="editor__button-icon editor__button-icon--tablet editor__button--fill" type="button">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="22px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path fill="none" d="M0,0h48v48H0V0z"/><path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/><rect y="40" width="48" height="3"/></svg>
-                    </button>
-                    <div class="controls__scale controls__scale--tablet controls__scale--tablet-fill"></div>
-                  </li>
-                  <li class="editor__item--tablet">
-                    <button class="editor__button-icon editor__button-icon--tablet editor__button--bright" type="button">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve"><path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/><path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
-                      </svg>
-                    </button>
-                    <div class="controls__scale controls__scale--tablet controls__scale--tablet-bright"></div>
-                  </li>
-                </ul>
-
-                <ul class="editor__list--desktop">
-                  <li class="editor__item--desktop">
-                    <button class="editor__button-icon editor__button-icon--desktop editor__button--crop-desktop" type="button">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                      <path fill="none" d="M0,0h48v48H0V0z"/>
-                      <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
-                      </svg>
-                    </button>
-                    <div class="controls__scale controls__scale--desktop controls__scale--desktop-crop"></div>
-                  </li>
-                  <li class="editor__item--desktop">
-                    <button class="editor__button-icon editor__button-icon--desktop editor__button--fill" type="button">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path fill="none" d="M0,0h48v48H0V0z"/><path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/><rect y="40" width="48" height="3"/></svg>
-                    </button>
-                    <div class="controls__scale controls__scale--desktop controls__scale--desktop-fill"></div>
-                  </li>
-                  <li class="editor__item--desktop">
-                    <button class="editor__button-icon editor__button-icon--desktop editor__button--bright" type="button">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve"><path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/><path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
-                      </svg>
-                    </button>
-                    <div class="controls__scale controls__scale--desktop controls__scale--desktop-bright"></div>
-                  </li>
-                </ul>
-                <div class="editor__controls controls">
-                  <div class="controls__scale"></div>
+                <div class="range range--main">
+                  <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
+                    </div>
+                    <button class="range__toggle"></button>
+                  </div>
                 </div>
               </div>
               <div class="editor__wrapper--button">
@@ -237,13 +258,13 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper footer__wrapper--inner">
         <div class="footer__logo logo-footer">
-          <a class="logo-footer__link logo-footer__link--mobile" href="index.html">
-            <img class="logo-footer__image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип компании Пинк">
-          </a>
-          <a class="logo-footer__link logo-footer__link--desktop" href="index.html">
-            <img class="logo-footer__image" src="img/logotype-blue-desktop.png" width="147" height="40" alt="Логотип компании Пинк">
+          <a class="logo-footer__link" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+              <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип компании Пинк">
+            </picture>
           </a>
         </div>
         <div class="footer__social social">

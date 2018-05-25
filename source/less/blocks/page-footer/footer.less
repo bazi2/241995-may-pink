@@ -12,28 +12,57 @@
   padding: 40px 20px;
 }
 
+.footer__wrapper--inner {
+  padding: 41px 20px;
+}
+
 .footer__social {
-  margin-bottom: 39px;
+  margin-bottom: 37px;
 }
 
 @media (min-width: @tablet-width) {
   .footer__wrapper {
     width: 620px;
-    padding: 36px 0;
+    padding: 28px 0;
 
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+  }
+
+  .footer__logo {
+    margin-right: 74px;
   }
 
   .footer__social {
     margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .footer__copyright {
+    margin-left: auto;
+    margin-top: 12px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer__wrapper {
     width: 940px;
-    padding: 70px 0;
+    padding: 57px 0;
+  }
+
+  .footer__wrapper--inner {
+    padding: 87px 0;
+  }
+
+  .footer__wrapper--inner-form {
+    padding: 51px 0;
+  }
+
+  .footer__logo {
+    margin-right: 236px;
+  }
+
+  .footer__social {
+    margin-top: 14px;
   }
 }

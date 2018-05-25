@@ -1,7 +1,9 @@
 .editor__wrapper {
   width: 280px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 24px 20px;
+  margin-bottom: 17px;
+
   background-color: @color-main--light;
 }
 
@@ -24,37 +26,41 @@
   padding-bottom: 40px;
 }
 
-.editor__photo {
+.editor__picture {
   width: 280px;
   margin: 0 auto;
 }
 
-.editor__toggle {
+.editor__images {
+  display: block;
+}
+
+.editor__wrapper--column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
 
-  padding: 42px 23px 28px 18px;
+.editor__wrapper--list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto;
+  padding: 42px 20px 34px 20px;
 
   border-bottom: 1px solid #ebecec;
 }
 
-.editor__list--tablet {
-  display: none;
-}
-
-.editor__list--desktop {
-  display: none;
-}
-
 .editor__list {
   display: flex;
-  justify-content: space-between;
-  width: 198px;
+  align-items: center;
+  width: 223px;
 
   margin: 0;
+  margin-bottom: 27px;
   padding: 0;
-  margin-bottom: 33px;
+
   list-style: none;
 }
 
@@ -75,56 +81,56 @@
   }
 }
 
-.editor__button--bright path {
-  fill: rgba(40, 54, 69, 0.3);
-
-  &:hover {
-    fill: rgba(40, 54, 69, 0.5);
-  }
-
-  &:active {
-    fill: @color-hover;
-  }
+.editor__button-icon--active svg {
+  fill: @color-hover;
 }
 
-.editor__item {
-  display: flex;
-
-  svg {
-    align-self: center;
-  }
+.editor__button--crop {
+  margin-right: 19px;
 }
 
-.editor__controls {
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 18px;
+.editor__button--fill {
+  margin-right: 29px;
 }
 
-.controls__scale {
+.range__controls {
   position: relative;
-  height: 2px;
+}
+
+.range__scale {
   width: 240px;
+  height: 2px;
 
-  background-color: #6b757f;
+  background-color: @color-main;
+}
 
-  &::after {
-    content: "";
+.range__bar {
+  width: 193px;
+  height: 2px;
 
-    position: absolute;
-    right: 33px;
-    top: -6px;
-    width: 12px;
-    height: 12px;
+  background-color: @color-main;
+}
 
-    background-color: @color-main--darken;
-    border-radius: 50%;
-    border: 2px solid @color-hover;
-  }
+.range__toggle {
+  position: absolute;
+  top: -6px;
+  right: 33px;
 
-  &:active::after {
-    background-color: @color-hover;
-  }
+  width: 12px;
+  height: 12px;
+
+  background-color: @color-main--light;
+
+  border: 2px solid @color-hover;
+  border-radius: 50%;
+}
+
+.range {
+  display: none;
+}
+
+.range--main {
+  display: block;
 }
 
 .editor__wrapper--button {
@@ -188,183 +194,231 @@
 }
 
 @media (min-width: @tablet-width) {
+  .editor__wrapper--gray {
+    width: 620px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 57px 20px 54px 20px;
+  }
+
   .editor__wrapper {
     width: 620px;
-    margin: 0 auto;
+    padding-top: 44px;
+    margin-bottom: 44px;
   }
 
   .editor__text {
     font-size: 18px;
   }
 
-  .editor__wrapper--gray {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 620px;
-    margin: 0 auto;
-    padding-top: 57px;
-    padding-bottom: 54px;
+  .editor__picture {
+    width: 300px;
+    margin: 0;
   }
 
   .editor__wrapper--column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 276px;
+    width: 275px;
+  }
+
+  .editor__wrapper--list {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .range {
+    display: block;
+    width: 202px;
+    margin-right: 18px;
+  }
+
+  .range__scale {
+    width: 202px;
+  }
+
+  .range--crop {
+    margin-top: 20px;
+  }
+
+  .range--fill {
+    margin-top: 36px;
+  }
+
+  .range--bright {
+    margin-top: 33px;
+  }
+
+  .range--crop .range__bar {
+    width: 146px;
+  }
+
+  .range--crop .range__toggle {
+    right: 41px;
+  }
+
+  .range--fill .range__bar {
+    width: 25px;
+  }
+
+  .range--fill .range__toggle {
+    left: 25px;
+  }
+
+  .range--bright .range__bar {
+    width: 96px;
+  }
+
+  .range--bright .range__toggle {
+    left: 96px;
+  }
+
+  .range--main {
+    display: none;
   }
 
   .editor__list {
-    display: none;
-  }
-
-  .editor__controls {
-    display: none;
-  }
-
-  .editor__list--tablet {
-    display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 0;
-
-    list-style: none;
+    margin-bottom: 66px;
+    width: 100%;
   }
 
-  .editor__button-icon--tablet {
-    margin-right: 28px;
-
-    border: none;
-    background-color: transparent;
-  }
-
-  .editor__toggle {
-    padding: 0;
-    border: none;
-  }
-
-  .editor__item--tablet {
+  .editor__item {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    width: 100%;
 
     border-bottom: 1px solid #ebecec;
   }
 
-  .controls__scale--tablet {
-    width: 202px;
-    height: 2px;
-    marign-left: 28px;
-
-    background-color: #6b757f;
+  .editor__button--crop svg {
+    width: 22px;
+    height: 22px;
+    margin-top: 9px;
+    margin-bottom: 20px;
   }
 
-  .editor__item--tablet:first-child {
-    padding: 9px 18px 24px 3px;
+  .editor__button--fill {
+    margin-right: 18px;
   }
 
-  .editor__item--tablet:nth-child(2) {
-    padding: 27px 18px 23px 3px;
+  .editor__button--fill svg {
+    width: 24px;
+    height: 22px;
+    margin-top: 27px;
+    margin-bottom: 18px;
   }
 
-  .editor__item--tablet:nth-child(3) {
-    padding: 26px 18px 27px 8px;
+  .editor__button--bright svg {
+    width: 16px;
+    height: 16px;
+    margin-top: 26px;
+    margin-bottom: 22px;
   }
 
-  .controls__scale--tablet-crop::after {
-    right: 42px;
+  .editor__wrapper--button {
+    padding: 0;
+    margin-right: 13px;
   }
 
-  .controls__scale--tablet-fill::after {
-    left: 25px;
+  .editor__button {
+    width: 260px;
   }
 
-  .controls__scale--tablet-bright::after {
-    right: 92px;
+  .editor__button--post {
+    margin-bottom: 26px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .editor__wrapper {
-    padding: 65px 20px;
-  }
-
-  .editor__wrapper--bg {
-    background-color: @color-main--light;
+    padding-top: 3px;
+    margin-bottom: 42px;
   }
 
   .editor__wrapper--gray {
     width: 800px;
-    padding: 57px 60px 57px 80px;
-    margin: 0 auto;
-    background-color: @color-main--darken;
-  }
-
-  .editor__photo {
-    margin: 0;
+    padding: 57px 25px 57px 60px;
   }
 
   .editor__wrapper--column {
     width: 410px;
   }
 
-  .editor__list--tablet {
-    display: none;
-  }
-
-  .editor__list--desktop {
-    display: flex;
-    flex-direction: column;
-    width: 410px;
-
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-  }
-
-  .editor__item--desktop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 15px 0;
-
-    border-bottom: 1px solid #ebecec;
-  }
-
-  .editor__item--desktop:first-child {
-    padding-top: 0;
-  }
-
-  .controls__scale--desktop {
-    width: 289px;
-  }
-
-  .controls__scale--desktop-crop::after {
-    left: 71px;
-  }
-
-  .controls__scale--desktop-fill::after {
-    right: 27px;
-  }
-
-  .controls__scale--desktop-bright::after {
-    right: 114px;
+  .editor__list {
+    margin-bottom: 145px;
   }
 
   .editor__wrapper--button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
     width: 410px;
+    margin: 0;
+    flex-direction: row;
   }
 
   .editor__button {
-    width: 185px;
+    width: 183px;
   }
 
   .editor__button--post {
-    margin-bottom: 0;
+    margin: 0;
+  }
+
+  .editor__button--reset {
+    margin-left: auto;
+  }
+
+  .editor__button--crop svg {
+    width: 44px;
+    height: 44px;
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+
+  .editor__button--fill svg {
+    width: 48px;
+    height: 43px;
+    margin-top: 15px;
+    margin-bottom: 9px;
+  }
+
+  .editor__button--bright svg {
+    width: 32px;
+    height: 32px;
+    margin-top: 18px;
+    margin-bottom: 14px;
+    margin-left: 6px;
+  }
+
+  .range {
+    width: 288px;
+    margin-right: 30px;
+  }
+
+  .range__scale {
+    width: 288px;
+  }
+
+  .range--crop .range__bar {
+    width: 71px;
+  }
+
+  .range--crop .range__toggle {
+    left: 71px;
+  }
+
+  .range--fill .range__bar {
+    width: 247px;
+  }
+
+  .range--fill .range__toggle {
+    left: 247px;
+  }
+
+  .range--bright .range__bar {
+    width: 160px;
+  }
+
+  .range--bright .range__toggle {
+    left: 160px;
   }
 }
