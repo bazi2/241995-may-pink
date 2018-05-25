@@ -1,9 +1,4 @@
-.page-header {
-  position: relative;
-}
-
-.page-header__logo {
-  display: block;
+.page-header__logo-image--mobile {
   position: absolute;
   top: 21px;
   left: 20px;
@@ -11,64 +6,63 @@
   width: 75px;
   height: 22px;
 
-  background-image: url("../img/logo-mobile.svg");
-  background-repeat: no-repeat;
+  z-index: 4;
 
-  z-index: 3;
 
-  &:hover {
-    background-image: url("../img/logo-mobile-hover.svg");
+  &:hover path {
+    fill: @color-hover;
   }
 
-  &:active {
-    background-image: url("../img/logo-mobile.svg");
+  &:active path {
+    fill: @color-hover;
     opacity: 0.3;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__logo {
+  .page-header__logo-image--mobile {
+    display: none;
+  }
+
+  .page-header__logo-image--tablet {
+    position: absolute;
     top: 29px;
     left: 3%;
 
     width: 147px;
     height: 40px;
 
-    background-image: url("../img/logo-tablet.svg");
-    background-repeat: no-repeat;
+    z-index: 4;
 
-    &:hover {
-      background-image: url("../img/logo-tablet-hover.svg");
-      background-repeat: no-repeat;
+    &:hover path {
+      fill: @color-hover;
     }
 
-    &:active {
-      background-image: url("../img/logo-tablet.svg");
-      background-repeat: no-repeat;
+    &:active path {
+      fill: @color-hover;
       opacity: 0.3;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__logo {
+  .page-header__logo-image--tablet {
+    display: none;
+  }
+
+  .page-header__logo-image--desktop {
+    position: absolute;
     top: 27px;
     left: 11%;
 
     margin-left: 0;
 
-    background-image: url("../img/logo-pink-white-desktop.svg");
-    background-repeat: no-repeat;
-
-    &:hover {
-      background-image: url("../img/logo-desctop-hover.svg");
-      background-repeat: no-repeat;
+    &:hover path {
+      fill: @color-hover;
     }
 
-    &:active {
-      background-image: url("../img/logo-pink-white-desktop.svg");
-      background-repeat: no-repeat;
-
+    &:active path {
+      fill: @color-hover;
       opacity: 0.3;
     }
   }

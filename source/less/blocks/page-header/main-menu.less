@@ -125,7 +125,6 @@
 
 @media (min-width: @desktop-width) {
   .main-menu {
-    position: absolute;
     top: 0;
     width: 100%;
     min-height: 110px;
@@ -133,8 +132,6 @@
     background-color: rgba(0, 0, 0, 0.3);
 
     cursor: auto;
-
-    z-index: 4;
   }
 
   .main-menu__wrapper {
@@ -200,5 +197,9 @@
 
       background-color: @color-main--light;
     }
+  }
+
+  .main-menu__link--current:hover::after {
+    background-color: @color-hover;
   }
 }
